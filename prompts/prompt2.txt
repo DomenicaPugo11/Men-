@@ -1,0 +1,1 @@
+Agrega una estructura a la parte estética como un menú para elegir que juego jugar con colores y decoraciones que tu consideres aptos para esto. La imagen hazla mas pequeña y alineada a lado de autor y letras del tamaño adecuado para cada cosa 

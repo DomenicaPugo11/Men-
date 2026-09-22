@@ -4,120 +4,197 @@
 
 body {
     margin: 0;
-    padding: 40px 20px;
+    padding: 35px 20px;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #e8eef9, #f8f4ed);
     color: #333;
-    text-align: center;
+    min-height: 100vh;
 }
 
+/* CONTENEDOR PRINCIPAL */
+
 .contenedor {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 35px;
-    background-color: white;
+    background-color: #ffffff;
+    border: 2px solid #d7deea;
     border-radius: 25px;
-    border: 2px solid #d5dce8;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 30px rgba(50, 65, 90, 0.15);
 }
+
 
 /* ENCABEZADO */
 
 .encabezado {
+    text-align: center;
     margin-bottom: 35px;
 }
 
 .encabezado h1 {
     margin: 0 0 20px 0;
-    font-size: 38px;
+    font-size: 36px;
     color: #405a85;
 }
 
-/* AUTOR Y LOGO */
+
+/* AUTOR */
 
 .autor {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 .autor img {
-    width: 75px;
-    height: 75px;
+    width: 55px;
+    height: 55px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #405a85;
+    border: 2px solid #6685b5;
 }
 
 .autor h2 {
     margin: 0;
-    font-size: 20px;
-    color: #5f6875;
+    font-size: 19px;
+    color: #5c6572;
 }
 
-/* PROYECTOS */
 
-.proyectos {
+/* MENU */
+
+.menu {
+    padding-top: 5px;
+}
+
+.menu h3 {
+    text-align: center;
+    margin: 0 0 25px 0;
+    font-size: 24px;
+    color: #405a85;
+}
+
+
+/* TARJETAS */
+
+.juegos {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 25px;
 }
 
-.proyecto {
+.tarjeta {
+    width: 50%;
     padding: 25px;
-    background-color: #f6f8fc;
-    border: 2px solid #dce3ef;
-    border-radius: 18px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid;
     transition: 0.2s;
 }
 
-.proyecto:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(50, 70, 100, 0.15);
+.tarjeta:hover {
+    transform: translateY(-5px);
 }
 
-.proyecto h2 {
-    margin: 0 0 18px 0;
-    font-size: 19px;
-    color: #4d5663;
+
+/* TARJETA DEL GATO */
+
+.juego-gato {
+    background-color: #eef5ff;
+    border-color: #9bb5dc;
 }
 
-/* ENLACES */
+.juego-gato .icono {
+    background-color: #dce9fa;
+}
 
-.proyecto a {
+
+/* TARJETA DE LIMONES */
+
+.juego-limon {
+    background-color: #fff7df;
+    border-color: #e8c36a;
+}
+
+.juego-limon .icono {
+    background-color: #ffedb2;
+}
+
+
+/* ICONOS */
+
+.icono {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+
+/* TEXTO DE LOS JUEGOS */
+
+.tarjeta h2 {
+    min-height: 70px;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #4f5865;
+}
+
+
+/* BOTONES */
+
+.tarjeta a {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #6685b5;
+    padding: 11px 35px;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 4px 0 #49668f;
+    border-radius: 10px;
     transition: 0.2s;
 }
 
-.proyecto a:hover {
-    background-color: #7898c8;
-    transform: translateY(-2px);
+
+/* BOTON GATO */
+
+.juego-gato a {
+    background-color: #6685b5;
+    box-shadow: 0 4px 0 #49668f;
 }
 
-.proyecto a:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #49668f;
+.juego-gato a:hover {
+    background-color: #7898c8;
 }
+
+
+/* BOTON LIMON */
+
+.juego-limon a {
+    background-color: #e39a35;
+    box-shadow: 0 4px 0 #b96f16;
+}
+
+.juego-limon a:hover {
+    background-color: #eda94d;
+}
+
 
 /* PANTALLAS PEQUEÑAS */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     body {
         padding: 20px 10px;
     }
 
     .contenedor {
-        padding: 20px;
+        padding: 25px 15px;
     }
 
     .encabezado h1 {
@@ -128,12 +205,15 @@ body {
         font-size: 17px;
     }
 
-    .autor img {
-        width: 60px;
-        height: 60px;
+    .juegos {
+        flex-direction: column;
     }
 
-    .proyecto h2 {
-        font-size: 17px;
+    .tarjeta {
+        width: 100%;
+    }
+
+    .tarjeta h2 {
+        min-height: auto;
     }
 }
