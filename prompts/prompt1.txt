@@ -1,0 +1,1 @@
+Actua como un diseñador web,  mejora la parte visual de este juego modificando el html y creando una hoja de estilos (CSS) pero por separado sin juntarlos, agrega este logo en la parte izquierda a la misma altura que autor y no cambies el contenido de los h1 y h2

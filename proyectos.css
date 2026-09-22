@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eef9, #f8f4ed);
+    color: #333;
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #d5dce8;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    margin-bottom: 35px;
+}
+
+.encabezado h1 {
+    margin: 0 0 20px 0;
+    font-size: 38px;
+    color: #405a85;
+}
+
+/* AUTOR Y LOGO */
+
+.autor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.autor img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #405a85;
+}
+
+.autor h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #5f6875;
+}
+
+/* PROYECTOS */
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.proyecto {
+    padding: 25px;
+    background-color: #f6f8fc;
+    border: 2px solid #dce3ef;
+    border-radius: 18px;
+    transition: 0.2s;
+}
+
+.proyecto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(50, 70, 100, 0.15);
+}
+
+.proyecto h2 {
+    margin: 0 0 18px 0;
+    font-size: 19px;
+    color: #4d5663;
+}
+
+/* ENLACES */
+
+.proyecto a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #6685b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #49668f;
+    transition: 0.2s;
+}
+
+.proyecto a:hover {
+    background-color: #7898c8;
+    transform: translateY(-2px);
+}
+
+.proyecto a:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #49668f;
+}
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .encabezado h1 {
+        font-size: 28px;
+    }
+
+    .autor h2 {
+        font-size: 17px;
+    }
+
+    .autor img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .proyecto h2 {
+        font-size: 17px;
+    }
+}
